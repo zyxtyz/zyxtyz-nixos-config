@@ -17,7 +17,9 @@
   </tr>
 </table>
 
-
+# installation (idk if finished)
+```
+```
 
 
 ## it's kind of bad rn in looks, but i will add more things soon.
