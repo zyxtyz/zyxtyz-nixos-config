@@ -19,8 +19,7 @@
 
 # installation (idk if finished)
 ```
-curl -O https://github.com/zyxtyz/zyxtyz-nixos-config/install.py
-nix run nixpkgs#pypy3 -- ./install.py
+nix run nixpkgs#python3 -- ./install.py
 
 ```
 
