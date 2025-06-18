@@ -21,8 +21,9 @@
 
 
 ## it's kind of bad rn in looks, but i will add more things soon.
-  | To-Do 1       
+  | TODO     |
 |----------------|
-| - [ X ]        |
-| - [ ] Task 3   |
+| - [X]        |
+| - []        |
+----------------
 
