@@ -26,5 +26,6 @@
 | - [ ]  script to set a wallpaper and set stylix change colors to it at the same time      |
 | - [ ]  widgets |
 | - [ ]  more hardware configuration |
+| - [ ]  install script (probably in python since i love it :) ) |
 ----------------
 
