@@ -10,6 +10,9 @@
 				font_size 10.0
 				enable_ligatures yes
 				bell no
+				map ctrl+shift+c copy_to_clipboard
+				map ctrl+shift+v paste_from_clipboard
+
 				'';
 		};
 	};

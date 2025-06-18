@@ -12,12 +12,10 @@ in
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
   programs.hyprland.enable = true;
-  users.users.zyxtyz = {
+  users.users.${settings.userName} = {
 	isNormalUser = true;
-	home = "/home/zyxtyz";
+	home = "${settings.homeDirectory}";
 	extraGroups = [ "wheel" "networkmanager" ];
 	
 };
@@ -30,6 +28,8 @@ in
   services.displayManager.sddm.wayland.enable = true;
   system.stateVersion = "24.11";
   services.flatpak.enable = true;
+
+  time.timeZone = "${settings.timeZone}";
 
 }
 

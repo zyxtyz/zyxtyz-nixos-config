@@ -1,6 +1,7 @@
  { ... }:
  rec {
-	
+	wallpaperDir = "${homeDirectory}/.zyxtyz/wallpapers";
+	wallpaper = "${wallpaperDir}/nord-street.png";
 	fileManager = "superfile";
 	homeDirectory = "/home/zyxtyz";
 	userName = "zyxtyz";
@@ -31,8 +32,11 @@
 		"pywal"
 		"flatpak"
 		"stylix"
-		"zen-browser"
-	];	
+		"steam"
+		"nixvim"
+		"pyprland"
+		"bootloader"
+	 ];	
 	
 }
 	

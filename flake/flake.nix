@@ -7,6 +7,10 @@
     hyprland.url = "github:hyprwm/Hyprland";
     home-manager.url = "github:nix-community/home-manager";
     fabric.url = "github:Fabric-Development/fabric";
+    pyprland = {
+	url = "github:hyprland-community/pyprland";
+	inputs.nixpkgs.follows = "nixpkgs";
+	};
     stylix = {
 	inputs.nixpkgs.follows = "nixpkgs";
 	url = "github:danth/stylix";
@@ -15,8 +19,12 @@
 	url = "github:youwen5/zen-browser-flake";
 	inputs.nixpkgs.follows = "nixpkgs";
   };
+    nixvim = {
+	url = "github:nix-community/nixvim";
+	inputs.nixpkgs.follows = "nixpkgs";
+  };
 };
-  outputs = { self, nixpkgs, home-manager, fabric, stylix, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, fabric, stylix, nixvim, pyprland, ... }@inputs: 
     let
       system = "x86_64-linux";
       settings = import /home/zyxtyz/.zyxtyz/modules/settings.nix { };
@@ -34,6 +42,7 @@
           /home/zyxtyz/.zyxtyz/src/nixos/configuration.nix
           inputs.home-manager.nixosModules.home-manager
 	  inputs.stylix.nixosModules.stylix
+	  inputs.nixvim.nixosModules.nixvim
           {
 	home-manager = {
               useGlobalPkgs = true;
