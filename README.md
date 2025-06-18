@@ -19,8 +19,18 @@
 
 # installation (idk if finished)
 ```
+curl -O https://github.com/zyxtyz/zyxtyz-nixos-config/install.py
+nix run nixpkgs#pypy31 -- ./script.py
+
 ```
 
+
+
+
+## random tips!
+- use pypy3 instead of Cpython3, its faster
+- your rice should be reproducible, so you can use it everywhere on any device.
+- use fabric as your widgets if you like python :} (https://github.com/Fabric-Development/fabric)
 
 ## it's kind of bad rn in looks, but i will add more things soon.
   | TODO     |
