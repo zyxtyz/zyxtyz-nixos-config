@@ -23,7 +23,7 @@
 ## it's kind of bad rn in looks, but i will add more things soon.
   | TODO     |
 |----------------|
+| - [X]  script to set a wallpaper and set stylix change colors to it at the same time      |
 | - [X]        |
-| - []        |
 ----------------
 
