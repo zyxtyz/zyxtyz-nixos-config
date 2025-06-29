@@ -2,6 +2,7 @@
 {
 	environment.systemPackages = with pkgs; [
 		hyprlandPlugins.hypr-dynamic-cursors
+		comixcursors
 	];
 	home-manager.users.${settings.userName} = {
 		wayland.windowManager.hyprland = {

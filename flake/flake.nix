@@ -6,7 +6,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hyprland.url = "github:hyprwm/Hyprland";
     home-manager.url = "github:nix-community/home-manager";
-    fabric.url = "github:Fabric-Development/fabric";
     pyprland = {
 	url = "github:hyprland-community/pyprland";
 	inputs.nixpkgs.follows = "nixpkgs";
@@ -23,8 +22,16 @@
 	url = "github:nix-community/nixvim";
 	inputs.nixpkgs.follows = "nixpkgs";
   };
+    
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixcord = {
+      url = "github:kaylorben/nixcord";
+  };
 };
-  outputs = { self, nixpkgs, home-manager, fabric, stylix, nixvim, pyprland, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, stylix, nixvim, pyprland, quickshell, ... }@inputs: 
     let
       system = "x86_64-linux";
       settings = import /home/zyxtyz/.zyxtyz/modules/settings.nix { };
@@ -45,6 +52,9 @@
 	  inputs.nixvim.nixosModules.nixvim
           {
 	home-manager = {
+	      sharedModules = [
+			inputs.nixcord.homeModules.nixcord
+		];
               useGlobalPkgs = true;
               useUserPackages = true;
               backupFileExtension = "backup";

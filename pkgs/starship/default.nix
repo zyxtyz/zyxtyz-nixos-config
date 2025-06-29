@@ -1,5 +1,13 @@
- { pkgs, settings, config, ... }:
+ { pkgs, settings, config, lib, ... }:
 
  {
-    environment.systemPackages = [ pkgs.starship ];
+ environment.systemPackages = [ pkgs.starship ];
+ home-manager.users.${settings.userName} = { 
+	programs.starship = {
+		enable = true;
+		enableZshIntegration = true;
+			
+ 	};
+ };
+
  }

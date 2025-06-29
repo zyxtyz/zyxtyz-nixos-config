@@ -1,4 +1,4 @@
- { pkgs, inputs, settings, config, home, ... }:
+ { pkgs, inputs, ... }:
 
 {
 	environment.systemPackages = [

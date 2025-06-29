@@ -30,10 +30,12 @@
 			telescope.enable = true;
 			tmux-navigator.enable = true;
 			lsp.enable = true;
+
 		};
 		extraPlugins = with pkgs.vimPlugins; [
 				statix
 			 	llama-vim
+			 	image-nvim
 		 		
 		 ];
 	};

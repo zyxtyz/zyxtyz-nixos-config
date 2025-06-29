@@ -24,11 +24,11 @@ in
 	allowBroken = true;
 };
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
   system.stateVersion = "24.11";
   services.flatpak.enable = true;
-
+  home-manager.users.${settings.userName} = {
+		services.mpd-discord-rpc.enable = true;
+	};
   time.timeZone = "${settings.timeZone}";
 
 }

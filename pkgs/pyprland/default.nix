@@ -19,7 +19,7 @@
 
       [scratchpads.music]
       animation = "fromTop"
-      command = "kitty termusic"
+      command = "kitty rmpc"
       class = "kitty"
       size = "50% 50%"
       position = "30% 35%"

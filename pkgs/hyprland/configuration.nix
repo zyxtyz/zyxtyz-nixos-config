@@ -10,22 +10,21 @@
       exec-once = [
         "swww-daemon"
         "swaync"
-	"kitty +kitten panel -o window_padding_width=0.00 -o background_opacity=0.00 --edge=background tty-clock -c"
-	"zsh -c 'sleep 5s; hyprctl dispatch exec termusic-server'"
 	"until bluetoothctl connect 90:7A:58:5B:AA:72; do sleep 3; done"
 	"pypr"
+	"mpd"
 	];
 
       general = {
         gaps_in = 6;
         gaps_out = 15;
-        border_size = 0;
-   #    "col.active_border" = "$color2 $color3 45deg";
-   #    "col.inactive_border" = "$color8";
+        border_size = 2;
+					# "col.active_border" = "${config.lib.stylix.colors.base03}";
+					#   "col.inactive_border" = "${config.lib.stylix.colors.base08}";
       };
 
       decoration = {
-        rounding = 0;
+        rounding = 3;
         active_opacity = "1.0";
         inactive_opacity = "1.0";
         fullscreen_opacity = "1.0";
@@ -99,7 +98,10 @@
 	" $mod CONTROL, M, exec, pypr show music"
 	" $mod CONTROL, A, exec, pypr show audio"
       ];
-
+      binde = [
+	" , XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
+	" , XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+	];
       bindm = [
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
@@ -124,7 +126,7 @@
             "opacity 0.80 0.80 1, class:^([Cc]ode)$"
             "opacity 0.80 0.80 1, class:^(code-url-handler)$"
             "opacity 0.80 0.80 1, class:^(code-insiders-url-handler)$"
-            "opacity 0.80 0.80 1, class:^(kitty)$"
+					# "opacity 0.80 0.80 1, class:^(kitty)$"
             "opacity 0.80 0.80 1, class:^(org.kde.dolphin)$"
             "opacity 0.80 0.80 1, class:^(org.kde.ark)$"
             "opacity 0.80 0.80 1, class:^(nwg-look)$"

@@ -1,7 +1,8 @@
  { ... }:
  rec {
-	wallpaperDir = "${homeDirectory}/.zyxtyz/wallpapers";
-	wallpaper = "${wallpaperDir}/nord-street.png";
+	theme = "rose-pine-moon"; #tokyo-night-storm | catppuccin-mocha | rose-pine-moon | 
+	wallpaper = null;
+
 	fileManager = "superfile";
 	homeDirectory = "/home/zyxtyz";
 	userName = "zyxtyz";
@@ -16,12 +17,13 @@
 		scale = "1";
 	};
 	shell = "zsh";
-	widgetsDir = "/home/zyxtyz/.zyxtyz/pkgs/widgets";
+	widgetsDir = "../qs";
 	scriptsDir = "/home/zyxtyz/.zyxtyz/pkgs/scripts";
+	cursor = "pkgs.comixcursors";
 	pkgs = [
 		"hyprland"
 		"swww"
-		"sddm"
+		"ly"
 		"vesktop"
 		"${terminal}"
 		"${browser}"
@@ -36,6 +38,9 @@
 		"nixvim"
 		"pyprland"
 		"bootloader"
+		"widget"
+		"rmpc"
+		"mpd"
 	 ];	
 	
 }
