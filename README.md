@@ -20,3 +20,8 @@ nix run nixpkgs#python3 -- ./install.py
 | - [ ]  more hardware configuration |
 | - **[ X ]**  install script (probably in python since i love it :) ) |
 ----------------
+
+
+
+# important TODO
+## literally everything. a lot of shit is for my personal needs. and my purpose for this rice is to make it for everyone. 
